@@ -1,21 +1,37 @@
-//
-//  ContentView.swift
-//  Club37
-//
-//  Created by 庄司有希 on 2024/08/31.
-//
-
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
+    let items: [ListItem] = sampleListItems
+    @State private var isImagePickerPresented = false
+    @State private var capturedImage: UIImage?
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Spacer()
+            ListItemView(items: items)
+            Spacer()
+            // Check-inボタン
+            Button(action: {
+                isImagePickerPresented = true
+            }) {
+                Text("CHECK-IN")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.black)
+                            .shadow(color: .white, radius: 10, x: 0, y: 0)
+                    )
+            }
+            .padding(.bottom, 30)
+            .sheet(isPresented: $isImagePickerPresented) {
+                ImagePickerView(isPresented: $isImagePickerPresented, selectedImage: $capturedImage)
+            }
         }
-        .padding()
+        .background(Color.black.edgesIgnoringSafeArea(.all))
     }
 }
 
