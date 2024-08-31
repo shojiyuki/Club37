@@ -7,12 +7,12 @@ struct ContentView: View {
     @State private var isImagePickerPresented = false
     @State private var capturedImage: UIImage?
     @State private var isCheckInAllowed: Bool = false
-    @State private var showHeaderTime: Bool = false
-
+    @State private var timeRemaining: String = ""
+    
     var body: some View {
         VStack {
-            HeaderView(showTime: $showHeaderTime)
-
+            HeaderView(timeRemaining: $timeRemaining, isCheckInAllowed: $isCheckInAllowed)
+            
             Spacer()
             ListItemView(items: items, currentIndex: $currentIndex)
             Spacer()
@@ -39,15 +39,17 @@ struct ContentView: View {
         }
         .background(Color.black.edgesIgnoringSafeArea(.all))
         .onAppear {
-            let isAllowed = isItemTimeWithin37MinutesOfCurrentTime(selectedItemTime: items[currentIndex].time)
-            isCheckInAllowed = isAllowed
-            showHeaderTime = isAllowed
+            updateCheckInAllowed()
+            startTimerIfNeeded()
         }
         .onChange(of: currentIndex) { oldValue, newValue in
-            let isAllowed = isItemTimeWithin37MinutesOfCurrentTime(selectedItemTime: items[newValue].time)
-            isCheckInAllowed = isAllowed
-            showHeaderTime = isAllowed
+            updateCheckInAllowed()
+            startTimerIfNeeded()
         }
+    }
+    
+    func updateCheckInAllowed() {
+        isCheckInAllowed = isItemTimeWithin37MinutesOfCurrentTime(selectedItemTime: items[currentIndex].time)
     }
     
     func isItemTimeWithin37MinutesOfCurrentTime(selectedItemTime: Date) -> Bool {
@@ -55,10 +57,32 @@ struct ContentView: View {
         let timeInterval: TimeInterval = TimeInterval(Constants.minute37) * 60 // 37分を秒に変換
         let timeThreshold = currentTime.addingTimeInterval(-timeInterval)
         
-        print("現在時刻: \(currentTime)")
-        print("アイテムの時間: \(selectedItemTime)")
-        
         return selectedItemTime >= timeThreshold && selectedItemTime <= currentTime
+    }
+    
+    func startTimerIfNeeded() {
+        if isCheckInAllowed {
+            startTimer()
+        } else {
+            timeRemaining = "" // チェックイン不可のときにカウントダウンをリセット
+        }
+    }
+
+    func startTimer() {
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            let selectedItemTime = items[currentIndex].time
+            let endTime = selectedItemTime.addingTimeInterval(TimeInterval(Constants.minute37) * 60)
+            let currentTime = Date()
+            let remainingTime = endTime.timeIntervalSince(currentTime)
+            
+            if remainingTime <= 0 {
+                timer.invalidate()
+                timeRemaining = ""
+                isCheckInAllowed = false
+            } else {
+                timeRemaining = TimeIntervalFormatterUtil.formatToMinutesAndSeconds(remainingTime)
+            }
+        }
     }
 }
 
