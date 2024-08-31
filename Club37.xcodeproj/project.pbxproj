@@ -19,6 +19,9 @@
 		A3377C462C82F45D003F81F6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3377C452C82F45D003F81F6 /* Constants.swift */; };
 		A38178FA2C83377B0095AEA5 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38178F92C83377B0095AEA5 /* HeaderView.swift */; };
 		A38178FC2C834C550095AEA5 /* TimeIntervalFormatterUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38178FB2C834C550095AEA5 /* TimeIntervalFormatterUtil.swift */; };
+		A38179032C837B500095AEA5 /* ImagePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38179022C837B500095AEA5 /* ImagePreviewView.swift */; };
+		A38179052C8382250095AEA5 /* CheckInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38179042C8382250095AEA5 /* CheckInButton.swift */; };
+		A38179072C8386EA0095AEA5 /* CountdownWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38179062C8386EA0095AEA5 /* CountdownWrapperView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		A3377C452C82F45D003F81F6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A38178F92C83377B0095AEA5 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		A38178FB2C834C550095AEA5 /* TimeIntervalFormatterUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalFormatterUtil.swift; sourceTree = "<group>"; };
+		A38179022C837B500095AEA5 /* ImagePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewView.swift; sourceTree = "<group>"; };
+		A38179042C8382250095AEA5 /* CheckInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInButton.swift; sourceTree = "<group>"; };
+		A38179062C8386EA0095AEA5 /* CountdownWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownWrapperView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,9 +122,12 @@
 			isa = PBXGroup;
 			children = (
 				A3377C2F2C821717003F81F6 /* ContentView.swift */,
+				A38179022C837B500095AEA5 /* ImagePreviewView.swift */,
 				A38178F92C83377B0095AEA5 /* HeaderView.swift */,
 				A3377C412C821822003F81F6 /* ImagePickerView.swift */,
 				A3377C3D2C821765003F81F6 /* ListItemView.swift */,
+				A38179042C8382250095AEA5 /* CheckInButton.swift */,
+				A38179062C8386EA0095AEA5 /* CountdownWrapperView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -193,9 +202,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A38179072C8386EA0095AEA5 /* CountdownWrapperView.swift in Sources */,
 				A38178FC2C834C550095AEA5 /* TimeIntervalFormatterUtil.swift in Sources */,
 				A3377C3C2C821757003F81F6 /* ListItem.swift in Sources */,
 				A38178FA2C83377B0095AEA5 /* HeaderView.swift in Sources */,
+				A38179052C8382250095AEA5 /* CheckInButton.swift in Sources */,
+				A38179032C837B500095AEA5 /* ImagePreviewView.swift in Sources */,
 				A3377C302C821717003F81F6 /* ContentView.swift in Sources */,
 				A3377C2E2C821717003F81F6 /* Club37App.swift in Sources */,
 				A3377C402C821772003F81F6 /* SampleListItemData.swift in Sources */,
