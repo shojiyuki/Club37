@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ListItemView: View {
     let items: [ListItem]
-    @State private var currentIndex: Int = 0
+    @Binding var currentIndex: Int  // Bindingとして渡す
     
     var body: some View {
         VStack {
@@ -83,5 +83,5 @@ struct ListItemView: View {
 }
 
 #Preview {
-    ListItemView(items: sampleListItems)
+    ListItemView(items: sampleListItems, currentIndex: .constant(0))
 }

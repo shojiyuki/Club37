@@ -16,6 +16,8 @@
 		A3377C402C821772003F81F6 /* SampleListItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3377C3F2C821772003F81F6 /* SampleListItemData.swift */; };
 		A3377C422C821822003F81F6 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3377C412C821822003F81F6 /* ImagePickerView.swift */; };
 		A3377C442C82C99A003F81F6 /* DateFormatterUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3377C432C82C99A003F81F6 /* DateFormatterUtil.swift */; };
+		A3377C462C82F45D003F81F6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3377C452C82F45D003F81F6 /* Constants.swift */; };
+		A38178FA2C83377B0095AEA5 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38178F92C83377B0095AEA5 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		A3377C3F2C821772003F81F6 /* SampleListItemData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleListItemData.swift; sourceTree = "<group>"; };
 		A3377C412C821822003F81F6 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		A3377C432C82C99A003F81F6 /* DateFormatterUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterUtil.swift; sourceTree = "<group>"; };
+		A3377C452C82F45D003F81F6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A38178F92C83377B0095AEA5 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,15 +65,17 @@
 		A3377C2C2C821717003F81F6 /* Club37 */ = {
 			isa = PBXGroup;
 			children = (
-				A3377C3D2C821765003F81F6 /* ListItemView.swift */,
-				A3377C432C82C99A003F81F6 /* DateFormatterUtil.swift */,
-				A3377C3F2C821772003F81F6 /* SampleListItemData.swift */,
 				A3377C2D2C821717003F81F6 /* Club37App.swift */,
-				A3377C3B2C821757003F81F6 /* ListItem.swift */,
+				A3377C452C82F45D003F81F6 /* Constants.swift */,
 				A3377C2F2C821717003F81F6 /* ContentView.swift */,
+				A3377C432C82C99A003F81F6 /* DateFormatterUtil.swift */,
+				A38178F92C83377B0095AEA5 /* HeaderView.swift */,
+				A3377C412C821822003F81F6 /* ImagePickerView.swift */,
+				A3377C3B2C821757003F81F6 /* ListItem.swift */,
+				A3377C3D2C821765003F81F6 /* ListItemView.swift */,
+				A3377C3F2C821772003F81F6 /* SampleListItemData.swift */,
 				A3377C312C82171A003F81F6 /* Assets.xcassets */,
 				A3377C332C82171A003F81F6 /* Preview Content */,
-				A3377C412C821822003F81F6 /* ImagePickerView.swift */,
 			);
 			path = Club37;
 			sourceTree = "<group>";
@@ -153,12 +159,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3377C3C2C821757003F81F6 /* ListItem.swift in Sources */,
+				A38178FA2C83377B0095AEA5 /* HeaderView.swift in Sources */,
 				A3377C302C821717003F81F6 /* ContentView.swift in Sources */,
 				A3377C2E2C821717003F81F6 /* Club37App.swift in Sources */,
 				A3377C402C821772003F81F6 /* SampleListItemData.swift in Sources */,
 				A3377C422C821822003F81F6 /* ImagePickerView.swift in Sources */,
 				A3377C3E2C821765003F81F6 /* ListItemView.swift in Sources */,
 				A3377C442C82C99A003F81F6 /* DateFormatterUtil.swift in Sources */,
+				A3377C462C82F45D003F81F6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
