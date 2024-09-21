@@ -51,11 +51,3 @@ struct CountdownWrapperView<Content: View>: View {
         }
     }
 }
-
-#Preview {
-    CountdownWrapperView(selectedItemTime: Date()) { isCheckInAllowed, timeRemaining in
-        Text("This is a preview")
-            .foregroundColor(isCheckInAllowed ? .green : .red)
-            .overlay(Text(timeRemaining))
-    }
-}
