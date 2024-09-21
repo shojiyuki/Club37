@@ -41,6 +41,7 @@
 		A38179022C837B500095AEA5 /* ImagePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewView.swift; sourceTree = "<group>"; };
 		A38179042C8382250095AEA5 /* CheckInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInButton.swift; sourceTree = "<group>"; };
 		A38179062C8386EA0095AEA5 /* CountdownWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownWrapperView.swift; sourceTree = "<group>"; };
+		A38179082C980F340095AEA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +74,7 @@
 		A3377C2C2C821717003F81F6 /* Club37 */ = {
 			isa = PBXGroup;
 			children = (
+				A38179082C980F340095AEA5 /* Info.plist */,
 				A3377C2D2C821717003F81F6 /* Club37App.swift */,
 				A3377C3F2C821772003F81F6 /* SampleListItemData.swift */,
 				A3377C312C82171A003F81F6 /* Assets.xcassets */,
@@ -351,6 +353,8 @@
 				DEVELOPMENT_TEAM = XD4QMCF6MM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Club37/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "このアプリはカメラを使用して写真を撮影します。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -380,6 +384,8 @@
 				DEVELOPMENT_TEAM = XD4QMCF6MM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Club37/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "このアプリはカメラを使用して写真を撮影します。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
