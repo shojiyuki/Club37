@@ -1,5 +1,4 @@
 import SwiftUI
-import UIKit
 
 struct ContentView: View {
     let items: [ListItem] = sampleListItems
@@ -39,7 +38,8 @@ struct ContentView: View {
                             }
                         }
                 } else if view == "ImagePreview" {
-                    ImagePreviewView(image: $capturedImage)
+                    // ImagePreviewViewに現在のselectedItemTimeを渡す
+                    ImagePreviewView(image: $capturedImage, selectedItemTime: items[currentIndex].time)
                 }
             }
         }
